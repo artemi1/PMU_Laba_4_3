@@ -10,6 +10,6 @@ public class MainActivity extends Activity
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(new SceneView(this));
+        setContentView(new VerletMove(this));
     }
 }
