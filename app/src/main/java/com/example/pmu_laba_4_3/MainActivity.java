@@ -40,8 +40,8 @@ public class MainActivity extends Activity
 
                 float mDeltaT = 0.1f;
 
-                final VerletMove mVerletMove = (VerletMove) findViewById(R.id.verletMove);
-                mVerletMove.initValues(mInitX, mInitY, mInitSpeedX, mInitSpeedY,
+                final PolygonMove mPolygonMove = (PolygonMove) findViewById(R.id.polygonMove);
+                mPolygonMove.initValues(mInitX, mInitY, mInitSpeedX, mInitSpeedY,
                         mAccelX, mAccelY, mDeltaT);
 
 

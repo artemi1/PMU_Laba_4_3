@@ -82,8 +82,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.example.pmu_laba_4_3.VerletMove
-            android:id="@+id/verletMove"
+        <com.example.pmu_laba_4_3.PolygonMove
+            android:id="@+id/polygonMove"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_span="3"
