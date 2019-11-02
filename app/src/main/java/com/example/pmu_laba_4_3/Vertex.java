@@ -4,36 +4,27 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 
 public class Vertex {
-    private float prevX, currX, prevY, currY;
+    private float X, Y;
 
 
-    public Vertex (float initX, float initY, float initSpeedX, float initSpeedY, float deltaT){
-        prevX = initX;
-        prevY = initY;
-
-        currX = initX + initSpeedX * deltaT;
-        currY = initY + initSpeedY * deltaT;
+    public Vertex (float initX, float initY){
+        X = initX;
+        Y = initY;
     }
 
-    // двигаем вершину по методу Верле и рисуем ее
-    public void MoveAndDrawVertex (float accelX, float accelY, float deltaT, Canvas canvas, Paint paint){
-        float deltaX = currX - prevX;
-        float deltaY = currY - prevY;
 
-        float nextX = currX + deltaX + accelX * deltaT;
-        float nextY = currY + deltaY + accelY * deltaT;
+    public float GetX() {return X;}
+    public float GetY() {return Y;}
 
-        prevX = currX;
-        prevY = currY;
-
-        currX = nextX;
-        currY = nextY;
-
-        canvas.drawCircle(currX, currY, 5.0f, paint);
+    public void MoveVertex(float deltaX, float deltaY) {
+        this.X += deltaX;
+        this.Y += deltaY;
     }
 
-    public float getCurrX() {return currX;}
-    public float getCurrY() {return currY;}
-
+    public void RotateVertex(float newBasisVectX_X, float newBasisVectX_Y,
+                             float newBasisVectY_X, float newBasisVectY_Y) {
+        this.X = this.X * newBasisVectX_X + this.Y * newBasisVectY_X;
+        this.Y = this.X * newBasisVectX_Y + this.Y * newBasisVectY_Y;
+    }
 
 }

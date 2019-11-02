@@ -39,10 +39,11 @@ public class MainActivity extends Activity
                 float mAccelY = Float.parseFloat(accelY.getText().toString());
 
                 float mDeltaT = 0.1f;
+                float mAngleSpeed = 0.5f;
 
                 final PolygonMove mPolygonMove = (PolygonMove) findViewById(R.id.polygonMove);
                 mPolygonMove.initValues(mInitX, mInitY, mInitSpeedX, mInitSpeedY,
-                        mAccelX, mAccelY, mDeltaT);
+                        mAccelX, mAccelY, mDeltaT, mAngleSpeed);
 
 
             }
