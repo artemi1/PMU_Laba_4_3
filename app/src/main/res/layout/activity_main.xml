@@ -22,11 +22,13 @@
             android:id="@+id/initY"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+
+    <!--
     </TableRow>
 
     <TableRow
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"> -->
 
         <TextView
             android:layout_width="wrap_content"
@@ -68,6 +70,44 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Шаг времени" />
+
+        <EditText
+            android:id="@+id/deltaT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" " />
+
+    <!--
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"> -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Шаг вращения" />
+
+        <EditText
+            android:id="@+id/angleSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </TableRow>
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
         <Button
             android:id="@+id/buttonStart"
             android:layout_width="wrap_content"
@@ -82,7 +122,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.example.pmu_laba_4_3.PolygonMove
+        <com.example.pmu_laba_4_3.Arena
             android:id="@+id/polygonMove"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"

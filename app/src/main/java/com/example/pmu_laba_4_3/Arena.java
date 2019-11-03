@@ -8,28 +8,15 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class PolygonMove extends View {
+public class Arena extends View {
 
     private boolean goDraw = false;
-    //private float accelX, accelY, deltaT;
-    //private float angleSpeed;
-    //private float centerX, centerY;
-
-    private Paint paint;
-    //ArrayList<Vertex> vertices;
     ArrayList<Polygon> polygons;
 
-    public PolygonMove(Context context, AttributeSet attrs) {
+    public Arena(Context context, AttributeSet attrs) {
         super(context, attrs);
 
-        //vertices = new ArrayList<Vertex>();
         polygons = new ArrayList<Polygon>();
-
-        //init paint object
-        paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-        paint.setStyle(Paint.Style.FILL_AND_STROKE);
-        paint.setStrokeWidth(10);
-        paint.setColor(Color.rgb(0, 0, 255));
 
     }
 
@@ -64,7 +51,7 @@ public class PolygonMove extends View {
 
                 // отрисовка полигонов
                 for (Polygon mPolygon : polygons) {
-                    mPolygon.DrawPolygon(canvas, paint);
+                    mPolygon.DrawPolygon(canvas);
                 }
 
                 invalidate();

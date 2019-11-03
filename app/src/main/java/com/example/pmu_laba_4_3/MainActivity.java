@@ -38,11 +38,17 @@ public class MainActivity extends Activity
                 final EditText accelY = (EditText)findViewById(R.id.accelY);
                 float mAccelY = Float.parseFloat(accelY.getText().toString());
 
-                float mDeltaT = 0.1f;
-                float mAngleSpeed = 0.5f;
+                final EditText deltaT = (EditText)findViewById(R.id.deltaT);
+                float mDeltaT = Float.parseFloat(deltaT.getText().toString());
 
-                final PolygonMove mPolygonMove = (PolygonMove) findViewById(R.id.polygonMove);
-                mPolygonMove.initValues(mInitX, mInitY, mInitSpeedX, mInitSpeedY,
+                final EditText angleSpeed = (EditText)findViewById(R.id.angleSpeed);
+                float mAngleSpeed = Float.parseFloat(angleSpeed.getText().toString());
+
+
+                //float mAngleSpeed = 0.5f;
+
+                final Arena mArena = (Arena) findViewById(R.id.polygonMove);
+                mArena.initValues(mInitX, mInitY, mInitSpeedX, mInitSpeedY,
                         mAccelX, mAccelY, mDeltaT, mAngleSpeed);
 
 
