@@ -16,8 +16,8 @@ public class MainActivity extends Activity
         //setContentView(new VerletMove(this));
         setContentView(R.layout.activity_main);
 
-        Button startButton = (Button) findViewById(R.id.buttonStart);
-        startButton.setOnClickListener(new View.OnClickListener() {
+        Button buttonStart = (Button) findViewById(R.id.buttonStart);
+        buttonStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 final EditText initX = (EditText)findViewById(R.id.initX);
@@ -44,14 +44,20 @@ public class MainActivity extends Activity
                 final EditText angleSpeed = (EditText)findViewById(R.id.angleSpeed);
                 float mAngleSpeed = Float.parseFloat(angleSpeed.getText().toString());
 
-
-                //float mAngleSpeed = 0.5f;
-
                 final Arena mArena = (Arena) findViewById(R.id.polygonMove);
                 mArena.initValues(mInitX, mInitY, mInitSpeedX, mInitSpeedY,
                         mAccelX, mAccelY, mDeltaT, mAngleSpeed);
 
 
+            }
+        });
+
+        Button buttonStartRandom = (Button) findViewById(R.id.buttonStartRandom);
+        buttonStartRandom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Arena mArena = (Arena) findViewById(R.id.polygonMove);
+                mArena.initValuesRandom();
             }
         });
     }

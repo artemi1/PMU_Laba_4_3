@@ -114,7 +114,21 @@
             android:layout_height="wrap_content"
             android:layout_span="3"
             android:layout_weight="2"
-            android:text="Start" />
+            android:text="Start with parameters" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/buttonStartRandom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="3"
+            android:layout_weight="2"
+            android:text="Start Random" />
 
     </TableRow>
 
